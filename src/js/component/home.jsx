@@ -1,26 +1,49 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 //include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+
+export const Home = () => {
 	return (
-		<div>
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<React.Fragment>
+			<Counter />
+		</React.Fragment>
 	);
 };
 
-export default Home;
+export function Counter(props) {
+	return (
+		<div className="Container d-flex bg-dark">
+			<div className="align-content-center col-3 fs-1" id="Clock">
+				<p className="text-light justify-content-center">
+					<i className="fas fa-clock"></i>
+				</p>
+			</div>
+			<div className="justify-content-center col-2 fs-1">
+				<p className="text-light">{props.numberFive}</p>
+			</div>
+			<div className="justify-content-center col-2 fs-1">
+				<p className="text-light">{props.numberFour}</p>
+			</div>
+			<div className="justify-content-center col-2 fs-1">
+				<p className="text-light">{props.numberThree}</p>
+			</div>
+			<div className="justify-content-center col-2 fs-1">
+				<p className="text-light">{props.numberTwo}</p>
+			</div>
+			<div className="justify-content-center col-2 fs-1">
+				<p className="text-light">{props.numberOne}</p>
+			</div>
+		</div>
+	);
+}
+
+Counter.propTypes = {
+	numberFive: PropTypes.number,
+	numberFour: PropTypes.number,
+	numberThree: PropTypes.number,
+	numberTwo: PropTypes.number,
+	numberOne: PropTypes.number,
+};
