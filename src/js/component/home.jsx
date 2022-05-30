@@ -17,7 +17,7 @@ export function Counter(props) {
 	return (
 		<div className="Container d-flex bg-dark">
 			<div className="align-content-center col-3 fs-1" id="Clock">
-				<p className="text-light justify-content-center">
+				<p className="text-light text-center">
 					<i className="fas fa-clock"></i>
 				</p>
 			</div>
