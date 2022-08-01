@@ -22,19 +22,19 @@ export function Counter(props) {
 				</p>
 			</div>
 			<div className="justify-content-center col-2 fs-1">
-				<p className="text-light">{props.numberFive}</p>
+				<p className="text-light">{props.numberFive % 10}</p>
 			</div>
 			<div className="justify-content-center col-2 fs-1">
-				<p className="text-light">{props.numberFour}</p>
+				<p className="text-light">{props.numberFour % 10}</p>
 			</div>
 			<div className="justify-content-center col-2 fs-1">
-				<p className="text-light">{props.numberThree}</p>
+				<p className="text-light">{props.numberThree % 10}</p>
 			</div>
 			<div className="justify-content-center col-2 fs-1">
-				<p className="text-light">{props.numberTwo}</p>
+				<p className="text-light">{props.numberTwo % 10}</p>
 			</div>
 			<div className="justify-content-center col-2 fs-1">
-				<p className="text-light">{props.numberOne}</p>
+				<p className="text-light">{props.numberOne % 10}</p>
 			</div>
 		</div>
 	);
